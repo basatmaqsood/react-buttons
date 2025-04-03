@@ -1,0 +1,30 @@
+.ghost-trail-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.ghost-trail-button__content {
+  position: relative;
+  z-index: 10;
+}
+
+.ghost-trail-button__trail {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  opacity: 0.8;
+  animation: fadeTrail linear forwards;
+}
+
+@keyframes fadeTrail {
+  0% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+}
+

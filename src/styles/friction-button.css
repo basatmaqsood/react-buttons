@@ -1,0 +1,17 @@
+.friction-button-container {
+  position: relative;
+  display: inline-block;
+  padding: 20px;
+}
+
+.friction-button {
+  position: relative;
+  user-select: none;
+  transition: box-shadow 0.2s ease;
+}
+
+.friction-button.is-dragging {
+  cursor: grabbing !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+

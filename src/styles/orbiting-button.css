@@ -1,0 +1,110 @@
+.orbiting-button-container {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.orbiting-button {
+  position: relative;
+  z-index: 10;
+}
+
+.orbiting-button__orbiter-wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  pointer-events: none;
+  transition: transform 0.3s ease;
+}
+
+.orbiting-button__orbiter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.orbiting-button__orbiter--circle {
+  border-radius: 50%;
+}
+
+.orbiting-button__orbiter--square {
+  border-radius: 0;
+}
+
+.orbiting-button__orbiter--triangle {
+  width: 0;
+  height: 0;
+  transform: translate(-50%, -33%) rotate(0deg);
+}
+
+.orbiting-button__orbiter--star {
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.orbiting-button__orbiter-wrapper.effect-explode {
+  animation: explodeEffect 1s forwards;
+}
+
+.orbiting-button__orbiter-wrapper.effect-spin {
+  animation: spinEffect 1s forwards;
+}
+
+.orbiting-button__orbiter-wrapper.effect-disappear {
+  animation: disappearEffect 1s forwards;
+}
+
+.orbiting-button__orbiter-wrapper.effect-converge {
+  animation: convergeEffect 1s forwards;
+}
+
+@keyframes explodeEffect {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(var(--angle)) translateX(var(--distance));
+    opacity: 0;
+  }
+}
+
+@keyframes spinEffect {
+  0% {
+    transform: translate(-50%, -50%) rotate(var(--angle)) translateX(var(--original-distance));
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(calc(var(--angle) + 3.14rad))
+      translateX(calc(var(--original-distance) * 0.5));
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(calc(var(--angle) + 6.28rad)) translateX(var(--original-distance));
+  }
+}
+
+@keyframes disappearEffect {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(var(--angle)) translateX(var(--original-distance));
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(var(--angle)) translateX(0);
+  }
+}
+
+@keyframes convergeEffect {
+  0% {
+    transform: translate(-50%, -50%) rotate(var(--angle)) translateX(var(--original-distance));
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(var(--angle)) translateX(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(var(--angle)) translateX(var(--original-distance));
+  }
+}
+

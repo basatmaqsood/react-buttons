@@ -1,0 +1,41 @@
+.exploding-confetti-container {
+  position: relative;
+  display: inline-block;
+  min-width: 100px;
+  min-height: 40px;
+}
+
+.exploding-confetti-button {
+  position: relative;
+  transition: opacity 0.2s ease;
+}
+
+.exploding-confetti__wrapper {
+  position: absolute;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.exploding-confetti__piece {
+  position: absolute;
+  transform-origin: center;
+}
+
+.exploding-confetti__piece--circle {
+  border-radius: 50%;
+}
+
+.exploding-confetti__piece--square {
+  border-radius: 0;
+}
+
+.exploding-confetti__piece--triangle {
+  width: 0;
+  height: 0;
+  transform-origin: 50% 70%;
+}
+
+.exploding-confetti__piece--line {
+  border-radius: 2px;
+}
+

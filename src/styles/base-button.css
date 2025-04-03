@@ -1,0 +1,38 @@
+.base-button {
+  position: relative;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  border: none;
+  background-color: #3b82f6;
+  color: white;
+}
+
+.base-button:focus {
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.base-button:hover {
+  background-color: #2563eb;
+}
+
+/* Size variants */
+.base-button--sm {
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+.base-button--md {
+  padding: 8px 16px;
+  font-size: 16px;
+}
+
+.base-button--lg {
+  padding: 12px 24px;
+  font-size: 18px;
+}
+

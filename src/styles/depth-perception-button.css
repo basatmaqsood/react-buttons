@@ -1,0 +1,10 @@
+.depth-perception-wrapper {
+  display: inline-block;
+  transform-style: preserve-3d;
+}
+
+.depth-perception-button {
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+  transform-style: preserve-3d;
+}
+

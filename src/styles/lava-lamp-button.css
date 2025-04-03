@@ -1,0 +1,29 @@
+.lava-lamp-button-container {
+  position: relative;
+  display: inline-block;
+}
+
+.lava-lamp-button {
+  position: relative;
+  z-index: 10;
+  background-color: transparent !important;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+}
+
+.lava-lamp-button__canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.lava-lamp-button__content {
+  position: relative;
+  z-index: 10;
+  mix-blend-mode: difference;
+  color: white;
+}
+

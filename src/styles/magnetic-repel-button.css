@@ -1,0 +1,11 @@
+.magnetic-repel-container {
+  position: relative;
+  display: inline-block;
+  padding: 40px;
+}
+
+.magnetic-repel-button {
+  position: relative;
+  transition: transform 0.05s ease-out;
+}
+

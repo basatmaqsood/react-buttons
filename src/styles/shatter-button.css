@@ -1,0 +1,31 @@
+.shatter-button-container {
+  position: relative;
+  display: inline-block;
+}
+
+.shatter-button {
+  transition: opacity 0.2s ease;
+}
+
+.shatter-button.shattered {
+  opacity: 0;
+}
+
+.shatter-button__shard {
+  position: absolute;
+  border-radius: 2px;
+  pointer-events: none;
+  opacity: 1;
+}
+
+@keyframes shatterFly {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(-50% + var(--distance-x)), calc(-50% + var(--distance-y))) rotate(720deg);
+    opacity: 0;
+  }
+}
+

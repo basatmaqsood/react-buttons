@@ -1,0 +1,11 @@
+.neon-glow-button {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #00ffff;
+  border: 2px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.neon-glow-button:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+

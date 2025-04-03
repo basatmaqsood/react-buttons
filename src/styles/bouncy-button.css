@@ -1,0 +1,9 @@
+.bouncy-button {
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.bouncy-button.is-animating {
+  animation-fill-mode: forwards;
+}
+
