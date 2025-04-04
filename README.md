@@ -1,7 +1,5 @@
-Here's the complete README.md file for your package:
 
-```markdown
-# @basatmaqsood/react-buttons
+## @basatmaqsood/react-buttons
 
 A collection of 16 highly interactive and customizable React buttons with advanced animations and effects for modern web applications.
 
@@ -599,10 +597,8 @@ Contributions, issues, and feature requests are welcome!
 5. Open a pull request
 
 
----
-
-`<p align="center">`Made with ❤️ by `<a href="https://github.com/basatmaqsood">`Basat Maqsood`</a>``</p>`
 
 ```plaintext
+Made with ❤️ by Basat Maqsood
 
 ```
